@@ -1,0 +1,45 @@
+﻿@model IEnumerable<LibraryManagementSystem.Models.MemberCategoryModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Library Management System</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MemberCategoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MemberCategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MemberCategoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MemberCategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td> 
+            @Html.ActionLink("Edit", "Edit", new { id = item.MemberCategoryId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MemberCategoryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MemberCategoryId })
+        </td>
+    </tr>
+}
+
+</table>

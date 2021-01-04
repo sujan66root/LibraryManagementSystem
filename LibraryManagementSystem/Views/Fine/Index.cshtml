@@ -1,0 +1,57 @@
+﻿@model IEnumerable<LibraryManagementSystem.Models.FineModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Library Management System</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FineId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LateDays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MemberCategoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FineId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LateDays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MemberCategoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.FineId}) |
+            @Html.ActionLink("Details", "Details", new { id = item.FineId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.FineId })
+        </td>
+    </tr>
+}
+
+</table>
