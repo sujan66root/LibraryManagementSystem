@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LMSDBModelStoreContainer" CdmEntityContainer="LMSDBEntities">
+    <EntitySetMapping Name="AssesionMappings">
+      <EntityTypeMapping TypeName="LMSDBModel.AssesionMapping">
+        <MappingFragment StoreEntitySet="AssesionMapping">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+          <ScalarProperty Name="AssesionId" ColumnName="AssesionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="LMSDBModel.Author">
+        <MappingFragment StoreEntitySet="Author">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="LMSDBModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+          <ScalarProperty Name="BookCategoryId" ColumnName="BookCategoryId" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookCategories">
+      <EntityTypeMapping TypeName="LMSDBModel.BookCategory">
+        <MappingFragment StoreEntitySet="BookCategory">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="BookCategoryName" ColumnName="BookCategoryName" />
+          <ScalarProperty Name="BookCategoryId" ColumnName="BookCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookIssueReturns">
+      <EntityTypeMapping TypeName="LMSDBModel.BookIssueReturn">
+        <MappingFragment StoreEntitySet="BookIssueReturn">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="MemberCategoryId" ColumnName="MemberCategoryId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FineAmount" ColumnName="FineAmount" />
+          <ScalarProperty Name="LateDays" ColumnName="LateDays" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="AssesionId" ColumnName="AssesionId" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="BookIssueReturnId" ColumnName="BookIssueReturnId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fines">
+      <EntityTypeMapping TypeName="LMSDBModel.Fine">
+        <MappingFragment StoreEntitySet="Fine">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="MemberCategoryId" ColumnName="MemberCategoryId" />
+          <ScalarProperty Name="LateDays" ColumnName="LateDays" />
+          <ScalarProperty Name="FineId" ColumnName="FineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="LMSDBModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="MemberAddress" ColumnName="MemberAddress" />
+          <ScalarProperty Name="MemberCategoryId" ColumnName="MemberCategoryId" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberCategories">
+      <EntityTypeMapping TypeName="LMSDBModel.MemberCategory">
+        <MappingFragment StoreEntitySet="MemberCategory">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="MemberCategoryName" ColumnName="MemberCategoryName" />
+          <ScalarProperty Name="MemberCategoryId" ColumnName="MemberCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="LMSDBModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+          <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
